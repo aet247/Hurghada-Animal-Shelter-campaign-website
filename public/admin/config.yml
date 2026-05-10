@@ -1,0 +1,81 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+publish_mode: editorial_workflow
+
+collections:
+  # ─── Animals ───────────────────────────────────────────────
+  - name: "animals"
+    label: "Animals"
+    label_singular: "Animal"
+    folder: "content/animals"
+    create: true
+    identifier_field: "name"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    summary: "{{name}} — {{gender}}, {{age}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Age", name: "age", widget: "string", hint: "e.g. 2 years, ~6 months" }
+      - { label: "Gender", name: "gender", widget: "select", options: ["Male", "Female"] }
+      - { label: "Rescued Date", name: "rescued", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Needs", name: "needs", widget: "string", hint: "e.g. veterinary care, special food" }
+      - { label: "Story", name: "body", widget: "markdown" }
+
+  # ─── Blog / Updates ────────────────────────────────────────
+  - name: "blog"
+    label: "Blog / Updates"
+    label_singular: "Post"
+    folder: "content/blog"
+    create: true
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publication Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Ahmed Fathi" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short summary shown in listing (160 chars recommended)" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ─── Gallery ───────────────────────────────────────────────
+  - name: "gallery"
+    label: "Gallery"
+    label_singular: "Media Item"
+    file: "content/gallery.json"
+    format: "json"
+    fields:
+      - label: "Media Items"
+        name: "items"
+        widget: "list"
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Type", name: "type", widget: "select", options: ["photo", "video"] }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "File / Thumbnail", name: "file", widget: "image" }
+          - { label: "Video URL", name: "videoUrl", widget: "string", required: false, hint: "YouTube or Vimeo URL" }
+          - { label: "Description", name: "description", widget: "text", required: false }
+
+  # ─── Budget / Ledger ───────────────────────────────────────
+  - name: "budget"
+    label: "Budget / Ledger"
+    label_singular: "Entry"
+    file: "content/budget.json"
+    format: "json"
+    fields:
+      - label: "Entries"
+        name: "entries"
+        widget: "list"
+        summary: "{{fields.date}} — {{fields.type}} — ${{fields.amount}}"
+        fields:
+          - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Type", name: "type", widget: "select", options: ["donation", "expense"] }
+          - { label: "Amount (USD)", name: "amount", widget: "number", value_type: "float" }
+          - { label: "Receipt", name: "receipt", widget: "image", required: false, hint: "Upload receipt image or PDF scan" }
+          - { label: "Notes", name: "notes", widget: "text", required: false }

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FDE68A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D97706;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B45309;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" rx="8"/>
+  <!-- Decorative paw prints -->
+  <text x="980" y="140" font-size="80" fill="#D97706" opacity="0.15">🐾</text>
+  <text x="160" y="520" font-size="100" fill="#D97706" opacity="0.10">🐾</text>
+  <text x="750" y="480" font-size="60" fill="#D97706" opacity="0.12">🐾</text>
+  <!-- Paw icon -->
+  <text x="100" y="200" font-size="130" fill="#D97706">🐾</text>
+  <!-- Title -->
+  <text x="300" y="220" font-family="Georgia, serif" font-size="58" font-weight="900" fill="#78350F" letter-spacing="-1">
+    Hurghada Animal Shelter
+  </text>
+  <!-- Subtitle -->
+  <text x="300" y="280" font-family="Arial, sans-serif" font-size="28" fill="#92400E" letter-spacing="0.5">
+    Help Build a Safe Haven for Stray Animals 🏡
+  </text>
+  <!-- Divider -->
+  <rect x="300" y="310" width="600" height="3" rx="2" fill="url(#accent)"/>
+  <!-- Description -->
+  <text x="300" y="360" font-family="Arial, sans-serif" font-size="22" fill="#78716C">
+    Support Ahmed Fathi's campaign to build a shelter for
+  </text>
+  <text x="300" y="395" font-family="Arial, sans-serif" font-size="22" fill="#78716C">
+    stray animals in Hurghada, Egypt. Every donation counts.
+  </text>
+  <!-- Goal -->
+  <rect x="300" y="430" width="220" height="44" rx="8" fill="#D97706"/>
+  <text x="410" y="458" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">
+    $5,000 Goal
+  </text>
+  <!-- Location -->
+  <text x="300" y="500" font-family="Arial, sans-serif" font-size="16" fill="#A8A29E">
+    Hurghada, Red Sea · Egypt
+  </text>
+</svg>

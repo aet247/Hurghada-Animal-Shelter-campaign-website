@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hurghada Animal Shelter — Help Build a Safe Haven</title>
+    <meta name="description" content="Support Ahmed Fathi's campaign to build a shelter for stray animals in Hurghada, Egypt. Every donation counts." />
+    <meta name="keywords" content="animal shelter, Hurghada, Egypt, stray animals, donate, animal welfare, build shelter, Red Sea" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hurghada Animal Shelter — Help Build a Safe Haven" />
+    <meta property="og:description" content="Support Ahmed Fathi's campaign to build a shelter for stray animals in Hurghada, Egypt." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hurghada-animal-shelter.netlify.app" />
+    <meta property="og:image" content="https://hurghada-animal-shelter.netlify.app/og-image.svg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_EG" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hurghada Animal Shelter" />
+    <meta name="twitter:description" content="Help build a shelter for stray animals in Hurghada, Egypt." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://hurghada-animal-shelter.netlify.app/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts: Fraunces (display) + Outfit (body) + Cairo (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Netlify Identity -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Netlify Identity CMS redirect -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function(user) {
+          if (!user) {
+            window.netlifyIdentity.on('login', function() {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
