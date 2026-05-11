@@ -142,32 +142,6 @@ a security best practice missing from the original spec.
 
 ---
 
-## 🔧 TypeScript Build Errors Found & Fixed (Verifier Pass)
-
-### 13. `Venus`/`Mars` icons missing from lucide-react v0.460.0
-**Problem**: `AnimalCard.tsx` and `AnimalDetailPage.tsx` imported `Venus` and `Mars` from
-`lucide-react`, but neither icon exists in v0.460.0. `GenderFemale`/`GenderMale` also absent.
-
-**Fix**: Replaced with inline Unicode gender symbols (`♀` / `♂`) rendered as text badges.
-Removed unused icon imports. No external dependency needed.
-
-### 14. Wrong import path in `ShareButtons.tsx`
-**Problem**: `../../lib/constants` used from `src/components/ShareButtons.tsx`. Correct
-relative path is `../lib/constants` (one level up, not two).
-
-**Fix**: Changed to `../lib/constants`.
-
-### 15. Absolute JSON imports not resolvable by TypeScript
-**Problem**: `loadBudget.ts` and `loadGallery.ts` used `/content/budget.json` and
-`/content/gallery.json` (absolute paths). TypeScript could not resolve these since the
-`include: ["src"]` in tsconfig doesn't cover the `content/` directory. Module declarations
-in `vite-env.d.ts` also failed for absolute paths.
-
-**Fix**: Changed imports to relative paths (`../../../content/budget.json`). Vite handles
-the resolution, and TypeScript can follow the relative chain. Module declarations removed.
-
----
-
 ## 📋 Things Ahmed/Developers Must Do After Download
 
 1. **Run `npm install`** — dependencies are not bundled

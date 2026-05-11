@@ -21,6 +21,29 @@ const PLACEHOLDER = 'data:image/svg+xml;base64,' + btoa(`
   </g>
 </svg>`)
 
+function GenderIcon({ gender }: { gender: string }) {
+  const isFemale = gender.toLowerCase() === 'female'
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+         strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+      {isFemale ? (
+        <>
+          <circle cx="12" cy="7" r="5" />
+          <line x1="12" y1="12" x2="12" y2="20" />
+          <line x1="9" y1="17" x2="15" y2="17" />
+        </>
+      ) : (
+        <>
+          <circle cx="14" cy="10" r="6" />
+          <line x1="18" y1="6" x2="8" y2="16" />
+          <line x1="10" y1="6" x2="18" y2="6" />
+          <line x1="18" y1="6" x2="18" y2="14" />
+        </>
+      )}
+    </svg>
+  )
+}
+
 export default function AnimalDetailPage() {
   const { t }    = useTranslation()
   const { slug } = useParams<{ slug: string }>()
@@ -69,8 +92,8 @@ export default function AnimalDetailPage() {
             <div className="flex items-center gap-3 mb-2">
               <h1 className="font-display text-4xl font-bold text-shelter-bark">{animal.name}</h1>
               {animal.gender && (
-                <span className={`text-lg font-bold ${animal.gender === 'Female' ? 'text-pink-500' : 'text-blue-500'}`}>
-                  {animal.gender === 'Female' ? '♀' : '♂'}
+                <span className={animal.gender.toLowerCase() === 'female' ? 'text-pink-500' : 'text-blue-500'}>
+                  <GenderIcon gender={animal.gender} />
                 </span>
               )}
             </div>

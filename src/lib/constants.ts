@@ -1,7 +1,7 @@
 export const CAMPAIGN = {
   goalAmount:  Number(import.meta.env.VITE_GOGETFUNDING_GOAL) || 5000,
-  raisedAmount: 150,      // UPDATE ME with real donation data as it arrives
-  donorCount:   3,        // UPDATE ME with real donation data as it arrives
+  raisedAmount: 0,        // Update manually as donations come in
+  donorCount:   0,        // Update manually
   animalsHelped: 12,      // Update manually
   donateUrl:   import.meta.env.VITE_GOGETFUNDING_URL  || 'https://gogetfunding.com',
   whatsapp:    import.meta.env.VITE_WHATSAPP_NUMBER  || '+201234567890',

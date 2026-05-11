@@ -5,7 +5,6 @@
 > **Tech Stack**: Vite + React 18 + TypeScript + Tailwind CSS + React Router
 > **CMS**: Decap CMS (Netlify Identity)
 > **Hosting**: Netlify (free static deploy)
-> **Fundraising**: [GoGetFunding Campaign](https://gogetfunding.com/building-a-shelter-for-stray-animals-2/)
 
 ---
 

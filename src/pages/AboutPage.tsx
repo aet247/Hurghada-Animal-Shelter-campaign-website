@@ -5,13 +5,16 @@ import Section from '../components/ui/Section'
 import { usePageMeta } from '../lib/usePageMeta'
 import { CAMPAIGN } from '../lib/constants'
 
-const AHMED_PLACEHOLDER = 'data:image/svg+xml;base64,' + btoa(`
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
-  <rect width="400" height="500" fill="#FDE68A"/>
-  <circle cx="200" cy="180" r="90" fill="#D97706" opacity="0.3"/>
-  <ellipse cx="200" cy="420" rx="130" ry="100" fill="#D97706" opacity="0.2"/>
-  <text x="200" y="260" text-anchor="middle" font-size="80" fill="#B45309" opacity="0.3">👤</text>
-</svg>`)
+// encodeURIComponent handles any Unicode safely — btoa only accepts Latin-1
+const AHMED_PLACEHOLDER = `data:image/svg+xml,${encodeURIComponent(
+  `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+    <rect width="400" height="500" fill="#FDE68A"/>
+    <circle cx="200" cy="180" r="90" fill="#D97706" opacity="0.25"/>
+    <ellipse cx="200" cy="430" rx="135" ry="105" fill="#D97706" opacity="0.18"/>
+    <circle cx="200" cy="175" r="55" fill="#B45309" opacity="0.18"/>
+    <rect x="140" y="255" width="120" height="140" rx="30" fill="#B45309" opacity="0.15"/>
+  </svg>`
+)}`
 
 export default function AboutPage() {
   const { t } = useTranslation()
