@@ -4,8 +4,8 @@ export const CAMPAIGN = {
   donorCount:   0,        // Update manually
   animalsHelped: 12,      // Update manually
   donateUrl:   import.meta.env.VITE_WHYDONATE_URL  || 'https://whydonate.com',
-  whatsapp:    import.meta.env.VITE_WHATSAPP_NUMBER  || '+201234567890',
-  email:       import.meta.env.VITE_CAMPAIGN_EMAIL   || 'ahmed@hurghada-shelter.org',
+  whatsapp:    import.meta.env.VITE_WHATSAPP_NUMBER  || '+201144422198',
+  email:       import.meta.env.VITE_CAMPAIGN_EMAIL   || 'Ahmedaboahmed295@gmail.com',
   instagram:   import.meta.env.VITE_INSTAGRAM_URL    || 'https://instagram.com/hurghada_shelter',
   facebook:    import.meta.env.VITE_FACEBOOK_URL     || 'https://facebook.com/hurghada.shelter',
   siteUrl:     import.meta.env.VITE_SITE_URL         || 'https://hurghada-animal-shelter.netlify.app',
