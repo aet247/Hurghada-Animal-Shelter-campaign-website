@@ -20,18 +20,14 @@ export default function ContactPage() {
       iconColor: 'text-green-600 bg-green-50',
       label: t('contact.whatsapp'),
       values: CAMPAIGN.whatsappNumbers,
-      href: `https://wa.me/${CAMPAIGN.whatsappNumbers[0]?.replace(/\D/g, '')}`,
       hint: t('contact.whatsappHint'),
-      external: true,
     },
     {
       icon: Mail,
       iconColor: 'text-amber-600 bg-amber-50',
       label: t('contact.email'),
       values: CAMPAIGN.emails,
-      href: `mailto:${CAMPAIGN.emails[0]}`,
       hint: t('contact.responseTime'),
-      external: false,
     },
     {
       icon: MapPin,
@@ -66,14 +62,16 @@ export default function ContactPage() {
                 {hint && <p className="text-xs text-shelter-bark2 flex items-center gap-1 mb-4">
                   <Clock className="w-3 h-3" /> {hint}
                 </p>}
-                <a
-                  href={href}
-                  target={external ? '_blank' : undefined}
-                  rel={external ? 'noopener noreferrer' : undefined}
-                  className="btn-outline text-sm py-2 px-4 inline-flex"
-                >
-                  {label} →
-                </a>
+                {href && (
+                  <a
+                    href={href}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener noreferrer' : undefined}
+                    className="btn-outline text-sm py-2 px-4 inline-flex"
+                  >
+                    {label} →
+                  </a>
+                )}
               </Card>
             ))}
           </div>
@@ -102,14 +100,16 @@ export default function ContactPage() {
                   <Facebook className="w-4 h-4" /> Facebook
                 </a>
               )}
-              <a
-                href={`https://wa.me/${CAMPAIGN.whatsapp.replace(/\D/g, '')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-green-100 transition-colors"
-              >
-                <MessageCircle className="w-4 h-4" /> WhatsApp
-              </a>
+              {CAMPAIGN.whatsapp && (
+                <a
+                  href={`https://wa.me/${CAMPAIGN.whatsapp.replace(/\D/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-green-100 transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" /> WhatsApp
+                </a>
+              )}
             </div>
           </Card>
 

@@ -55,14 +55,16 @@ export default function Footer() {
               {t('footer.connect')}
             </h3>
             <div className="space-y-3">
-              <a
-                href={`https://wa.me/${CAMPAIGN.whatsapp.replace(/\D/g, '')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-amber-200/70 hover:text-white text-sm transition-colors"
-              >
-                <MessageCircle className="w-4 h-4 text-green-400" /> WhatsApp
-              </a>
+              {CAMPAIGN.whatsapp && (
+                <a
+                  href={`https://wa.me/${CAMPAIGN.whatsapp.replace(/\D/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-amber-200/70 hover:text-white text-sm transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4 text-green-400" /> WhatsApp
+                </a>
+              )}
               <a
                 href={`mailto:${CAMPAIGN.email}`}
                 className="flex items-center gap-2 text-amber-200/70 hover:text-white text-sm transition-colors"
