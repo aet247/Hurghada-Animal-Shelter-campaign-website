@@ -31,8 +31,8 @@ Edit `.env` (never commit this file):
 
 | Variable | Description |
 |----------|-------------|
-| `VITE_GOGETFUNDING_URL` | Your GoGetFunding campaign URL |
-| `VITE_GOGETFUNDING_GOAL` | Fundraising goal in USD (e.g. `5000`) |
+| `VITE_WHYDONATE_URL` | Your WhyDonate campaign URL |
+| `VITE_WHYDONATE_GOAL` | Fundraising goal in USD (e.g. `5000`) |
 | `VITE_CAMPAIGN_EMAIL` | Ahmed's contact email |
 | `VITE_WHATSAPP_NUMBER` | WhatsApp number with country code |
 | `VITE_INSTAGRAM_URL` | Full Instagram profile URL |

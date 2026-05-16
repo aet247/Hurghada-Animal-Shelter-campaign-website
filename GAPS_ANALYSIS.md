@@ -145,7 +145,7 @@ a security best practice missing from the original spec.
 ## 📋 Things Ahmed/Developers Must Do After Download
 
 1. **Run `npm install`** — dependencies are not bundled
-2. **Create `.env`** from `.env.example` — fill in real GoGetFunding URL, WhatsApp, etc.
+2. **Create `.env`** from `.env.example` — fill in real WhyDonate URL, WhatsApp, etc.
 3. **Update `src/lib/constants.ts`** — set `raisedAmount` and `donorCount` as donations arrive
 4. **Replace placeholder avatar** in `AboutPage.tsx` — upload Ahmed's real photo
 5. **Add real photos to animals** via Decap CMS at `/admin/`

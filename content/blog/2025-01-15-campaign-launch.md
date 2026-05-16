@@ -21,9 +21,9 @@ We have secured a plot of land on the outskirts of Hurghada. The plan is to buil
 - Vaccinate and neuter animals to reduce the stray population humanely
 - Rehome animals with loving families — locally and internationally
 
-## Why GoGetFunding?
+## Why WhyDonate?
 
-We chose GoGetFunding because it allows us to collect donations transparently and from donors worldwide. Every single contribution is tracked here on this website — you can see exactly how your money is being spent.
+We chose WhyDonate because it allows us to collect donations transparently and from donors worldwide. Every single contribution is tracked here on this website — you can see exactly how your money is being spent.
 
 ## What We Need
 

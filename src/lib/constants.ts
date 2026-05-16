@@ -1,9 +1,9 @@
 export const CAMPAIGN = {
-  goalAmount:  Number(import.meta.env.VITE_GOGETFUNDING_GOAL) || 5000,
+  goalAmount:  Number(import.meta.env.VITE_WHYDONATE_GOAL) || 5000,
   raisedAmount: 0,        // Update manually as donations come in
   donorCount:   0,        // Update manually
   animalsHelped: 12,      // Update manually
-  donateUrl:   import.meta.env.VITE_GOGETFUNDING_URL  || 'https://gogetfunding.com',
+  donateUrl:   import.meta.env.VITE_WHYDONATE_URL  || 'https://whydonate.com',
   whatsapp:    import.meta.env.VITE_WHATSAPP_NUMBER  || '+201234567890',
   email:       import.meta.env.VITE_CAMPAIGN_EMAIL   || 'ahmed@hurghada-shelter.org',
   instagram:   import.meta.env.VITE_INSTAGRAM_URL    || 'https://instagram.com/hurghada_shelter',

@@ -1,8 +1,8 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_GOGETFUNDING_URL: string
-  readonly VITE_GOGETFUNDING_GOAL: string
+  readonly VITE_WHYDONATE_URL: string
+  readonly VITE_WHYDONATE_GOAL: string
   readonly VITE_CAMPAIGN_EMAIL: string
   readonly VITE_WHATSAPP_NUMBER: string
   readonly VITE_INSTAGRAM_URL: string
