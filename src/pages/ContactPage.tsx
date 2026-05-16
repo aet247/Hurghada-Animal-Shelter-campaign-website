@@ -19,8 +19,8 @@ export default function ContactPage() {
       icon: MessageCircle,
       iconColor: 'text-green-600 bg-green-50',
       label: t('contact.whatsapp'),
-      value: CAMPAIGN.whatsapp,
-      href: `https://wa.me/${CAMPAIGN.whatsapp.replace(/\D/g, '')}`,
+      values: CAMPAIGN.whatsappNumbers,
+      href: `https://wa.me/${CAMPAIGN.whatsappNumbers[0]?.replace(/\D/g, '')}`,
       hint: t('contact.whatsappHint'),
       external: true,
     },
@@ -28,8 +28,8 @@ export default function ContactPage() {
       icon: Mail,
       iconColor: 'text-amber-600 bg-amber-50',
       label: t('contact.email'),
-      value: CAMPAIGN.email,
-      href: `mailto:${CAMPAIGN.email}`,
+      values: CAMPAIGN.emails,
+      href: `mailto:${CAMPAIGN.emails[0]}`,
       hint: t('contact.responseTime'),
       external: false,
     },
@@ -37,7 +37,7 @@ export default function ContactPage() {
       icon: MapPin,
       iconColor: 'text-red-500 bg-red-50',
       label: t('contact.location'),
-      value: t('contact.locationDesc'),
+      values: [t('contact.locationDesc')],
       href: 'https://maps.google.com/?q=Hurghada,Egypt',
       hint: t('contact.map'),
       external: true,
@@ -52,13 +52,17 @@ export default function ContactPage() {
         <div className="container-content space-y-10 max-w-4xl">
           {/* Contact cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {cards.map(({ icon: Icon, iconColor, label, value, href, hint, external }) => (
+            {cards.map(({ icon: Icon, iconColor, label, values, href, hint, external }) => (
               <Card key={label} hover>
                 <div className={`w-11 h-11 rounded-xl ${iconColor} flex items-center justify-center mb-4`}>
                   <Icon className="w-5 h-5" />
                 </div>
                 <p className="text-xs text-shelter-bark2 font-semibold uppercase tracking-wider mb-1">{label}</p>
-                <p className="font-semibold text-shelter-bark mb-2">{value}</p>
+                <div className="space-y-1 mb-2">
+                  {values?.map((v: string) => (
+                    <p key={v} className="font-semibold text-shelter-bark text-sm">{v}</p>
+                  ))}
+                </div>
                 {hint && <p className="text-xs text-shelter-bark2 flex items-center gap-1 mb-4">
                   <Clock className="w-3 h-3" /> {hint}
                 </p>}
