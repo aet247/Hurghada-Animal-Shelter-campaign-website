@@ -3,12 +3,9 @@ export const CAMPAIGN = {
   raisedAmount: 0,        // Update manually as donations come in
   donorCount:   0,        // Update manually
   animalsHelped: 12,      // Update manually
-  donateUrl:   import.meta.env.VITE_WHYDONATE_URL  || 'https://whydonate.com',
+  donateUrl:   import.meta.env.VITE_WHYDONATE_URL  || 'https://whydonate.com/fundraising/stray-animal-protection-association-',
   whatsapp:    import.meta.env.VITE_WHATSAPP_NUMBER  || '+201144422198',
-  whatsapp2:   import.meta.env.VITE_WHATSAPP_NUMBER_2 || '',
-  whatsappNumbers: [import.meta.env.VITE_WHATSAPP_NUMBER, import.meta.env.VITE_WHATSAPP_NUMBER_2].filter(Boolean),
   email:       import.meta.env.VITE_CAMPAIGN_EMAIL   || 'Ahmedaboahmed295@gmail.com',
-  emails:      [import.meta.env.VITE_CAMPAIGN_EMAIL].filter(Boolean),
   instagram:   import.meta.env.VITE_INSTAGRAM_URL    || 'https://instagram.com/hurghada_shelter',
   facebook:    import.meta.env.VITE_FACEBOOK_URL     || 'https://facebook.com/hurghada.shelter',
   siteUrl:     import.meta.env.VITE_SITE_URL         || 'https://hurghada-animal-shelter.netlify.app',
